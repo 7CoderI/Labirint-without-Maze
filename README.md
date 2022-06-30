@@ -16,6 +16,7 @@
 # ИНСТРУКЦИЯ
 Запустите "labirint.exe" в закрепленном файле на GitHub, готово!
 # ИСХОДНЫЙ КОД
+
 '''python
 from pygame import* #подключаем библеотеку pygame
 '''Переменные для картинок'''
@@ -64,7 +65,6 @@ class Player(GameSprite):
     def fire(self):
         bullet = Bullet(img_bullet, self.rect.right, self.rect.centery, 15, 20, 15)
         bullets.add(bullet)
-
 class Enemy(GameSprite):
     side = "left"
     def update(self):
@@ -187,7 +187,6 @@ while game:
         elif e.type == KEYDOWN:
             if e.key == K_SPACE:
                 hero.fire()
-
     if finish != True:
         window.blit(back, (0,0))
         walls.draw(window)
@@ -204,8 +203,6 @@ while game:
         for c in collides:
            c.kill()
            count = count + 1
-
-
         #Проигрыш
         if sprite.collide_rect(hero,monster) or sprite.collide_rect(hero,monster2) or sprite.collide_rect(hero, w1) or sprite.collide_rect(hero,w2) or sprite.collide_rect(hero,w3) or sprite.collide_rect(hero,w4):
             finish = True
@@ -214,8 +211,6 @@ while game:
         if sprite.collide_rect(hero,final):
             finish = True
             window.blit(win, (200,200))
-    
     display.update()
-    clock.tick(FPS)
-
-'''
+    clock.tick(FPS) ] 
+    '''
