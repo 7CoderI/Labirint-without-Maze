@@ -17,7 +17,7 @@
 Запустите "labirint.exe" в закрепленном файле на GitHub, готово!
 # ИСХОДНЫЙ КОД
 
-'''python
+```python
 from pygame import* #подключаем библеотеку pygame
 '''Переменные для картинок'''
 img_back = 'back.png'
@@ -218,4 +218,4 @@ while game:
     
     display.update()
     clock.tick(FPS)
-'''
+```
